@@ -1,36 +1,39 @@
 <!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#8B5CF6" />
-    <meta
-      name="description"
-      content="Financify - Aplikasi budgeting cerdas untuk Gen Z"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financify Dashboard</title>
     
-    <!-- TailwindCSS CDN -->
+    <link rel="stylesheet" href="style.css">
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Custom configuration for Tailwind CSS to enable dark mode switching
+        tailwind.config = {
+            darkMode: 'class', // This tells Tailwind to use the 'dark' class on the <html> tag
+            theme: {
+                extend: {
+                   fontFamily: {
+                     sans: ['Inter', 'sans-serif'], // Example font, matches the modern look
+                   },
+                }
+            }
+        }
+    </script>
 
-    <!-- Google Fonts (Poppins) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Link ke file CSS kustom -->
-    <link rel="stylesheet" href="../src/style.css">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-    <title>Financify - Budgeting Cerdas</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script src="https://unpkg.com/recharts/umd/Recharts.min.js"></script>
+    <script src="https://unpkg.com/framer-motion@10/dist/framer-motion.umd.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
     <div id="root"></div>
-    <!-- 
-      Div ini adalah titik masuk utama. 
-      Aplikasi React akan dirender di dalam elemen ini.
-    -->
-  </body>
+
+    <script type="text/babel" src="App.js"></script>
+
+</body>
 </html>
